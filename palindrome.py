@@ -14,7 +14,8 @@ def is_palindrome(sentence):
 
 def main():
     user_input = input("enter some text to determine if it is a palindrome: ")
-    if is_palindrome == user_input:
+# updated below line; previously said function == user input
+    if is_palindrome(user_input):
         print("True!")
     else:
         print("False!")
