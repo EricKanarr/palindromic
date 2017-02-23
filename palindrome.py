@@ -1,15 +1,23 @@
+import re
+
 
 def is_palindrome(sentence):
-    # TODO: return True or False if the sentence is or isn't a palindrome
-    return "Shoulda done somthing"
-    pass
+    sentence = sentence.lower()
+    sentence = sentence.replace(" ", "")
+    sentence = re.sub(r'[^A-Za-z]', "", sentence)
+    if len(sentence) <= 1:
+        return True
+    if sentence[0] != sentence[-1]:
+        return False
+    is_palindrome(sentence[1:len(sentence)-1])
 
 
 def main():
-    user_input = input("enter some text to determine if it is a palindrome ")
-    print(is_palindrome(user_input))
-    # TODO: put your input/output code here
-    pass
+    user_input = input("enter some text to determine if it is a palindrome: ")
+    if is_palindrome == user_input:
+        print("True!")
+    else:
+        print("False!")
 
 
 if __name__ == '__main__':

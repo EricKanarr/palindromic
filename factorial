@@ -1,0 +1,9 @@
+# factorial
+def factorial(n):
+
+  #base
+  if n<= 1:
+    return 1
+  #do some work
+  #recurse
+  return n * factorial(n-1)
